@@ -48,7 +48,7 @@ The application runs in two modes:
 - Lightweight JVM-managed threads
 - Efficient parking/unparking during blocking calls
 
-Thread mode is configurable at runtime.
+Thread mode is configurable.
 
 ## Load Testing Strategy
 
@@ -56,7 +56,7 @@ Thread mode is configurable at runtime.
 - Concurrent users: 300
 - Ramp-up: 300 seconds
 - Duration: 360 seconds
-- Multiple downstream calls per request
+- Multiple downstream calls
 
 **Metrics Observed:**
 - Throughput (requests/sec)
@@ -64,28 +64,27 @@ Thread mode is configurable at runtime.
 - p90 / p95 / p99 latency
 - Error rate
 
-## Performance Results
+## 📊 Performance Results
 
-### Platform Threads
-
-| Metric | Value |
-|--------|-------|
-| Throughput | ~143 req/sec |
-| Avg Latency | ~1219 ms |
-| p95 | ~1873 ms |
-| p99 | ~1913 ms |
-
-### Virtual Threads
+### 🔴 Platform Threads
 
 | Metric | Value |
 |--------|-------|
-| Throughput | ~173 req/sec |
-| Avg Latency | ~1008 ms |
-| p95 | ~1013 ms |
-| p99 | ~1017 ms |
+| **Throughput** | ~143 req/sec |
+| **Avg Latency** | ~1219 ms |
+| **p95** | ~1873 ms |
+| **p99** | ~1913 ms |
 
-## JMeter Test Results
+### 🟢 Virtual Threads
 
+| Metric | Value |
+|--------|-------|
+| **Throughput** | ~173 req/sec |
+| **Avg Latency** | ~1008 ms |
+| **p95** | ~1013 ms |
+| **p99** | ~1017 ms |
+
+## 📸 JMeter Test Results
 Visual comparison of threading models under load:
 
 ### Response Time Over Time
