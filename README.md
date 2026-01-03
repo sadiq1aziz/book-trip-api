@@ -1,4 +1,4 @@
-[BookTripApi.drawio](https://github.com/user-attachments/files/24414063/BookTripApi.drawio)## Book Trip API
+## Book Trip API
 
 A Spring Boot backend service designed to empirically evaluate the performance characteristics of **Java platform threads vs virtual threads (Project Loom)** under high-concurrency, I/O-bound workloads.
 
