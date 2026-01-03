@@ -21,10 +21,7 @@ This project uses a simplified trip reservation API as a test harness where each
 
 ## Architecture
 
-```
 <img width="651" height="304" alt="BookTripApi drawio" src="https://github.com/user-attachments/assets/ac06d082-cb46-47e4-a6f4-44f45825b4af" />
-
-```
 
 - Each request triggers downstream calls
 - Downstream dependency is mocked to isolate threading behavior
