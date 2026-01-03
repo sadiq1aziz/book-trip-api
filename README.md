@@ -64,7 +64,7 @@ Thread mode is configurable.
 - p90 / p95 / p99 latency
 - Error rate
 
-## 📊 Performance Results
+## Performance Results
 
 ###  Platform Threads
 
@@ -84,7 +84,7 @@ Thread mode is configurable.
 | **p95** | ~1013 ms |
 | **p99** | ~1017 ms |
 
-## 📸 JMeter Test Results
+## JMeter Test Results
 Visual comparison of threading models under load:
 
 ### Response Time Over Time
