@@ -14,10 +14,6 @@ This project uses a simplified trip reservation API as a test harness where each
 - [JMeter Test Results](#jmeter-test-results)
 - [Key Observations](#key-observations)
 - [External Downstream Stub](#external-downstream-stub)
-- [Repository Structure](#repository-structure)
-- [Running the Tests](#running-the-tests)
-- [Learnings](#learnings)
-- [Author](#author)
 
 ## Architecture
 
@@ -165,24 +161,3 @@ This project depends on an external JAR (`downstream-stub.jar`) that simulates d
 ```
 
 ⚠️ The application will not start without this JAR.
-
-## Running the Tests
-
-Execute JMeter in non-GUI mode:
-
-```bash
-jmeter -n -t trip-reserve.jmx -l results.jtl
-```
-
-Result files (`.jtl`) are excluded from Git.
-
-## Learnings
-
-- Throughput alone is misleading — tail latency matters
-- Virtual threads excel when requests block on I/O
-- Thread dumps are essential to validate threading behavior
-
-## Author
-
-**Sadiq Aziz**  
-[GitHub](https://github.com/sadiq1aziz)
