@@ -66,7 +66,7 @@ Thread mode is configurable.
 
 ## 📊 Performance Results
 
-### 🔴 Platform Threads
+###  Platform Threads
 
 | Metric | Value |
 |--------|-------|
@@ -75,7 +75,7 @@ Thread mode is configurable.
 | **p95** | ~1873 ms |
 | **p99** | ~1913 ms |
 
-### 🟢 Virtual Threads
+###  Virtual Threads
 
 | Metric | Value |
 |--------|-------|
