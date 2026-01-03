@@ -88,15 +88,47 @@ Thread mode is configurable.
 Visual comparison of threading models under load:
 
 ### Response Time Over Time
-Latency trends during test execution for both platform and virtual threads.
+Latency trend during test execution for platform threads.
+<img width="1399" height="555" alt="responseTimeChart-300Req-PlatformThreads" src="https://github.com/user-attachments/assets/76d551e9-f1e8-4f59-9b44-882f92e07d83" />
+Latency trend during test execution for virtual threads.
+<img width="1127" height="555" alt="responseTimeChart-300Req-VirtualThreads" src="https://github.com/user-attachments/assets/65c7d188-5208-4ebe-b064-69d61e9ae3f4" />
+
 
 ### Transactions Per Second
 Throughput comparison under sustained concurrent load.
+<img width="1399" height="555" alt="transactionPerSecondChart-300Req-PlatformThreads" src="https://github.com/user-attachments/assets/da62ea2f-91f1-40f6-8248-726c0d68a658" />
+<img width="1127" height="555" alt="transactionPerSecondChart-300Req-VirtualThreads" src="https://github.com/user-attachments/assets/c13013e0-8f56-4f28-a1d2-f98bcd9bf979" />
 
 ### Aggregate Reports
 Detailed breakdown of percentiles (p50, p90, p95, p99) and error rates.
 
-*Screenshots available in `/docs/jmeter-results/`*
+### Platform Threads
+
+| Metric | Value |
+|--------|-------|
+| **Throughput** | 143.17 req/sec |
+| **# Samples** | 51,800 |
+| **Average** | 1219 ms |
+| **Median** | 1044 ms |
+| **90% Line** | 1856 ms |
+| **95% Line** | 1873 ms |
+| **99% Line** | 1913 ms |
+| **Min / Max** | 1004 / 1952 ms |
+| **Error %** | 0.00% |
+
+### Virtual Threads
+
+| Metric | Value |
+|--------|-------|
+| **Throughput** | 173.03 req/sec |
+| **# Samples** | 62,451 |
+| **Average** | 1008 ms |
+| **Median** | 1008 ms |
+| **90% Line** | 1011 ms |
+| **95% Line** | 1013 ms |
+| **99% Line** | 1017 ms |
+| **Min / Max** | 1004 / 1082 ms |
+| **Error %** | 0.00% |
 
 ## Key Observations
 
