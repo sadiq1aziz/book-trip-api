@@ -1,8 +1,8 @@
-# Book Trip API
+## Book Trip API
 
-A Spring Boot backend service built to evaluate **Java platform threads vs virtual threads (Project Loom)** under concurrent load.
+A Spring Boot backend service designed to empirically evaluate the performance characteristics of **Java platform threads vs virtual threads (Project Loom)** under high-concurrency, I/O-bound workloads.
 
-This project compares concurrency behavior, throughput, and tail latency using Apache JMeter.
+This project uses a simplified trip reservation API as a test harness where each incoming request fans out to multiple downstream service calls (via a mocked stub). By isolating threading behavior from business complexity and external dependencies, it measures the direct impact of thread model choice on throughput, latency distribution (particularly p95/p99), and resource utilization under load. The goal is to demonstrate when and why virtual threads provide measurable advantages over traditional platform threads in concurrent, blocking I/O scenarios.
 
 ## Table of Contents
 
@@ -22,17 +22,11 @@ This project compares concurrency behavior, throughput, and tail latency using A
 ## Architecture
 
 ```
-Client (JMeter)
-   |
-   v
-BookTrip API
-   |
-   +-- Downstream Stub (External JAR)
-         - Deterministic responses
-         - Simulates dependent services
+<img width="651" height="304" alt="BookTripApi drawio" src="https://github.com/user-attachments/assets/ac06d082-cb46-47e4-a6f4-44f45825b4af" />
+
 ```
 
-- Each request triggers multiple downstream calls
+- Each request triggers downstream calls
 - Downstream dependency is mocked to isolate threading behavior
 - No database — latency driven by I/O simulation
 
