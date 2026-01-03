@@ -85,21 +85,29 @@ Thread mode is configurable.
 | **p99** | ~1017 ms |
 
 ## JMeter Test Results
+
 Visual comparison of threading models under load:
 
 ### Response Time Over Time
-Latency trend during test execution for platform threads.
+
+Latency trend during test execution for platform threads:
+
 <img width="1399" height="555" alt="responseTimeChart-300Req-PlatformThreads" src="https://github.com/user-attachments/assets/76d551e9-f1e8-4f59-9b44-882f92e07d83" />
-Latency trend during test execution for virtual threads.
+
+Latency trend during test execution for virtual threads:
+
 <img width="1127" height="555" alt="responseTimeChart-300Req-VirtualThreads" src="https://github.com/user-attachments/assets/65c7d188-5208-4ebe-b064-69d61e9ae3f4" />
 
-
 ### Transactions Per Second
-Throughput comparison under sustained concurrent load.
+
+Throughput comparison under sustained concurrent load:
+
 <img width="1399" height="555" alt="transactionPerSecondChart-300Req-PlatformThreads" src="https://github.com/user-attachments/assets/da62ea2f-91f1-40f6-8248-726c0d68a658" />
+
 <img width="1127" height="555" alt="transactionPerSecondChart-300Req-VirtualThreads" src="https://github.com/user-attachments/assets/c13013e0-8f56-4f28-a1d2-f98bcd9bf979" />
 
 ### Aggregate Reports
+
 Detailed breakdown of percentiles (p50, p90, p95, p99) and error rates.
 
 ### Platform Threads
@@ -157,19 +165,6 @@ This project depends on an external JAR (`downstream-stub.jar`) that simulates d
 ```
 
 ⚠️ The application will not start without this JAR.
-
-## Repository Structure
-
-```
-book-trip-api/
- ├─ src/
- ├─ pom.xml
- ├─ README.md
- ├─ .gitignore
- ├─ docs/
- │   └─ jmeter-results/
- └─ external/              # local stub JAR (not committed)
-```
 
 ## Running the Tests
 
